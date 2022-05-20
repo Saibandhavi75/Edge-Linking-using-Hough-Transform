@@ -50,15 +50,16 @@ cv2.imshow("Gray Image",grayImage)
 # Find the edges in the image using canny detector and display
 
 
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+image = cv2.imread("suduko.webp")
+grayImage = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+plt.imshow(grayImage,'gray')
+cv2.imshow("Original Image",image)
+cv2.imshow("Gray Image",grayImage)
 
-smoothImage = cv2.GaussianBlur(grayImage,(3,3),0)
-plt.imshow(smoothImage)
-cannyEdges = cv2.Canny(smoothImage,120,200)
-plt.imshow(cannyEdges,cmap='gray')
-plt.title('Edge Image')
-plt.xticks([])
-plt.yticks([])
-plt.show()
+
 
 
 
@@ -92,7 +93,7 @@ plt.show()
 
 ### Canny Edge detector output
 
-![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt2.png?raw=true)
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt5.png?raw=true)
 
 
 ### Display the result of Hough transform
