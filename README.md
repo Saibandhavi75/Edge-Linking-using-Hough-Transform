@@ -84,8 +84,10 @@ plt.show()
 
 ### Input image and grayscale image
 
-![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/suduko.webp?raw=true)
+### Input Image:
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt4.png?raw=true)
 
+### grayscale Image:
 ![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt1.png?raw=true)
 
 ### Canny Edge detector output
