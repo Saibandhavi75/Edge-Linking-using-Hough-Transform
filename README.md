@@ -34,6 +34,9 @@ End the program.
 ```Python
 
 # Read image and convert it to grayscale image
+
+
+
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,7 +46,11 @@ plt.imshow(grayImage)
 cv2.imshow("Original Image",image)
 cv2.imshow("Gray Image",grayImage)
 
+
 # Find the edges in the image using canny detector and display
+
+
+
 smoothImage = cv2.GaussianBlur(grayImage,(3,3),0)
 plt.imshow(smoothImage)
 cannyEdges = cv2.Canny(smoothImage,120,200)
@@ -52,13 +59,18 @@ plt.title('Edge Image')
 plt.xticks([])
 plt.yticks([])
 plt.show()
+
+
+
 # Detect points that form a line using HoughLinesP
 lines = cv2.HoughLinesP(cannyEdges,1,np.pi/180,threshold=80,minLineLength = 50,maxLineGap = 250)
+
 
 # Draw lines on the image
 for line in lines:
 x1, y1, x2, y2 = line [0]
 cv2.line(image,(x1, y1),(x2, y2),(255, 0, 0),3)
+
 
 # Display the result
 
@@ -71,23 +83,19 @@ plt.show()
 ## Output
 
 ### Input image and grayscale image
-<br>
-<br>
-<br>
-<br>
+
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/suduko.webp?raw=true)
+
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt1.png?raw=true)
 
 ### Canny Edge detector output
-<br>
-<br>
-<br>
-<br>
+
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt2.png?raw=true)
 
 
 ### Display the result of Hough transform
-<br>
-<br>
-<br>
-<br>
+
+![output](https://github.com/Saibandhavi75/Edge-Linking-using-Hough-Transform/blob/main/dipt3.png?raw=true)
 
 
 
